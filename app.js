@@ -22,9 +22,9 @@ const store = new MongoDbStore({
 })
 app.use(express.json());
 app.use(express.urlencoded({extended: false}));
-const origins_urls = ["https://movie-website-app.onrender.com, "http://localhost:3000"]
+
 app.use(cors({
-  origin: origins_urls,
+  origin: "https://movie-website-app.onrender.com",
   methods: ["GET","POST"],
   credentials: true
 }))
